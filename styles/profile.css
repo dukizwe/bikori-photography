@@ -1,0 +1,111 @@
+body {
+    background: #f2f2f2;
+}
+header {
+    background: rgb(81, 227, 246);
+    z-index: 1000;
+}
+header nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.8);
+    transition: color 0.5s;
+    transition: background 0.2s;
+    border-radius: 2px;
+}
+header nav a:hover, header nav a:focus, header nav a.active {
+    color: rgb(255, 255, 255,0.8);
+    background: rgba(0, 0, 0, 0.342);
+    outline: none;
+}
+.profile-container {
+    width: 100%;
+    height: 100%;
+    padding: 50px 200px;
+    font-family: sans-serif;
+}
+.profile-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+.profile-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.profile-name {
+    color: #777;
+    font-size: 30px;
+    font-weight: 300;
+}
+.changing-password a {
+    background: rgba(66, 115, 180, 0.7);
+    color: rgb(255, 255, 255, 0.9);
+    width: max-content;
+    padding: 10px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.changing-password a:hover {
+    background: rgba(66, 115, 180, 0.9);
+}
+.editing-profile {
+    margin-top: 40px;
+}
+.editing-profile div {
+    position: relative;
+    margin-top: 10px;
+}
+.editing-profile input {
+    background: none;
+    padding: 8px 5px;
+    width: 400px;
+    margin-top: 25px;
+    outline: none;
+    color: #000;
+    font-size: 20px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.788);
+}
+.editing-profile input:focus {
+    outline: none;
+    border: 1px solid rgba(66, 115, 180, 0.7);
+}
+.editing-profile input:focus ~ label,
+.editing-profile input:valid ~ label
+{
+    top: 0;
+    font-size: 19px;
+    left: 6px;
+    color: rgba(0, 0, 0, 0.788);
+}
+.editing-profile label {
+    position: absolute;
+    top: 34px;
+    left: 6px;
+    color: #757575;
+    transition: top 0.2s;
+}
+.editing-profile label:hover {
+    cursor: auto;
+}
+.editing-profile .send-saves {
+    background: rgba(66, 115, 180, 0.7);
+    border: none;
+    width: 150px;
+    text-align: center;
+    transition: background 0.2s;
+    color: rgba(0, 0, 0, 0.788);
+    margin-left: 250px;
+    cursor: pointer;
+}
+.editing-profile .send-saves:hover {
+    background: rgba(66, 115, 180, 0.9);
+}

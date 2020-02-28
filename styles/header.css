@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+.full-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+.full-screen.visible {
+    display: block;
+}
+header {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.1)
+}
+@media screen and (max-width: 640px) {
+    header {
+        justify-content: center;
+    }
+    header .logo {
+        display: none;
+    }
+}
+header .logo {
+    margin-left: 20px;
+    padding: 0;
+    margin: 0 0 0 35px;
+    font-family: 'Supermercado One', cursive;
+}
+header .logo a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    transition: opacity 0.2s;
+}
+header .logo a:hover {
+    opacity: 0.5;
+}
+header nav {
+    margin-right: 20px;
+    padding: 10px 0;
+    text-align: center;
+}
+header nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.5s;
+    transition: background 0.2s;
+    border-radius: 2px;
+}
+header nav a.profile {
+    margin-right: 30px;
+    padding-right: 15px;
+}
+header nav a.profile span {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    margin-top: 6px;
+    margin-left: 2px;
+    border-top-style: solid;
+    border-top-width: 6px;
+    border-right: 6px solid transparent;
+    border-bottom: 0 solid transparent;
+    border-left: 6px solid transparent;
+}
+header nav a:hover, header nav a:focus, header nav a.active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.342);
+    outline: none;
+    box-shadow: 0 0 10px 1px rgb(0,0,0,.2);
+}
+/* aside */
+aside {
+    width: 100px;
+}
+.social-media {
+    display: grid;
+}
+@media screen and (max-width: 900px) {
+    header .site-admin {
+       display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    header nav {
+        margin-right: 0;
+    }
+}
+.dropdown-menu {
+    position: absolute;
+    background: #fff;
+    width: 180px;
+    border-radius: 4px;
+    padding: 0;
+    text-align: left;
+    z-index: 2000;
+    margin-left: -90px;
+    margin-top: 10px;
+    box-shadow: 0 1px 15px rgba(27,31,35,.15);
+    display: none;
+}
+.dropdown-menu.visible {
+    display: block;
+}
+.dropdown-menu::before {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    top: -6px;
+    right: 10px;
+    transform: rotate(45deg);
+}
+.dropdown-menu a {
+    color: #24292e;
+    display: block;
+    padding: 7px 15px;
+    transition: none;
+}
+.dropdown-menu a:hover,.dropdown-menu a:focus {
+    background: #1e1f26;
+    color: #fff;
+}
+.dropdown-menu a.connected-user {
+    font-weight: 600;
+}
+.dropdown-menu a.connected-user:hover,.dropdown-menu a.connected-user:focus {
+    background: none;
+    color: #000;
+}
+.dropdown-menu hr {
+    padding: 0;
+    margin:0;
+    opacity: 0.2;
+    width: 100%;
+}

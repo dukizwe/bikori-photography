@@ -1,0 +1,133 @@
+body {
+    
+}
+header {
+    background: rgb(81, 227, 246);
+}
+header .logo a {
+    color: #000;
+}
+header nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.8);
+    transition: color 0.5s;
+    transition: background 0.2s;
+    border-radius: 2px;
+}
+header nav a:hover, header nav a:focus, header nav a.active {
+    color: rgb(255, 255, 255,0.8);
+    background: rgba(0, 0, 0, 0.342);
+    outline: none;
+}
+.about-container {
+    width: 100%;
+    height: 100vh;
+    padding: 40px 20px;
+    margin: auto;
+    font-family: sans-serif;
+}
+.about-title {
+    text-align: center;
+    margin-top: 35px;
+    color: #777;
+    font-size: 30px;
+}
+.about-content {
+    width: 80%;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+@media screen and (max-width: 900px) {
+    .about-content {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 870px) {
+    .about-content {
+        display: block;
+    }
+    .carousel-images {
+        width: 80% !important;
+    }
+    .user-description {
+        width: 80%;
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+    }
+}
+@media screen and (max-width: 800px) {
+    .carousel-images {
+        width: 90% !important;
+    }
+    .user-description {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .about-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .about-content {
+        margin-left: 20px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .carousel-images {
+        width: 100% !important;
+    }
+    .user-description {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .user-description .full-name span,
+    .user-description .photograph-name span,
+    .user-description .country span,
+    .user-description .region span,
+    .user-description .age span {
+        margin-left: 10px !important;
+    }
+}
+.carousel-images {
+    width: 50%;
+}
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.user-description {
+    background: #f2f2f2;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-left: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+.user-description > div {
+    margin-top: 40px;
+}
+.user-description span {
+    color: #777;
+}
+.user-description .full-name span {
+    margin-left: 125px;
+}
+.user-description .photograph-name span {
+    margin-left: 68px;
+}
+.user-description .country span {
+    margin-left: 140px;
+}
+.user-description .region span {
+    margin-left: 145px;
+}
+.user-description .age span {
+    margin-left: 167px;
+}
+.user-description .photograph-begin span {
+    margin-left: 10px;
+}

@@ -1,0 +1,352 @@
+body {
+    background: #f2f2f2;
+}
+header {
+    background: rgb(81, 227, 246);
+    z-index: 1000;
+}
+header nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.8);
+    transition: color 0.5s;
+    transition: background 0.2s;
+    border-radius: 2px;
+}
+header nav a:hover, header nav a:focus, header nav a.active {
+    color: rgb(255, 255, 255,0.8);
+    background: rgba(0, 0, 0, 0.342);
+    outline: none;
+}
+.singup-title {
+    font-size: 40px;
+    color: #777;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.singup-container {
+    padding: 50px 0;
+    width: 100%;
+    font-family: sans-serif;
+}
+.singup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px 10px;
+    font-size: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    border-radius: 5px;
+}
+.singup-content div {
+    position: relative;
+}
+.singup-content input {
+    background: none;
+    padding: 8px 5px;
+    width: 400px;
+    margin-top: 25px;
+    outline: none;
+    color: #000;
+    font-size: 20px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.788);
+}
+.singup-content input:focus {
+    outline: none;
+    border: 1px solid rgba(66, 115, 180, 0.7);
+}
+.singup-content input:focus ~ label,
+.singup-content input:valid ~ label
+{
+    top: 0;
+    font-size: 19px;
+    left: 6px;
+    color: rgba(0, 0, 0, 0.788);
+}
+.singup-content label {
+    position: absolute;
+    top: 34px;
+    left: 6px;
+    color: #757575;
+    transition: top 0.2s;
+}
+.singup-content label:hover {
+    cursor: auto;
+}
+.singup-content .submit {
+    
+}
+.singup-content .send-singup {
+    background: rgba(66, 115, 180, 0.7);
+    border: none;
+    width: 150px;
+    text-align: center;
+    transition: background 0.2s;
+    color: rgba(0, 0, 0, 0.788);
+    margin-left: 250px;
+}
+.singup-content .send-singup:hover {
+    cursor: pointer;
+    background: rgba(66, 115, 180, 0.9);
+}
+.or-container {
+    text-align: right;
+    margin: 5px 0;
+    margin-right: 65px;
+}
+.sign-up-section {
+    display: flex;
+}
+.sign-up-section .sign-up-desc {
+    font-size: 17px;
+    margin-top: 10px;
+}
+.sign-up-section a.sign-up-now {
+    background: rgb(81, 227, 246, 0.7);
+    padding: 8px 5px;
+    border-radius: 2px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 15px;
+    color: rgba(0, 0, 0, 0.788)
+}
+.sign-up-section a.sign-up-now:hover {
+    background: rgb(81, 227, 246, 0.9);
+}
+@media screen and (max-width: 430px) {
+    .singup-content {
+        width: 90%;
+    }
+    .singup-content input {
+        width: 100%;
+    }
+    .singup-content .submit {
+        display: flex;
+        justify-content: center;
+    }
+    .singup-content .send-singup {
+        margin-left: 0;
+    }
+    .singup-content .or-container {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        margin-right: 0;
+    }
+    .singup-content .sign-up-section {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .singup-content a.sign-up-now {
+        margin-left: 0;
+    }
+}
+/* modal of errors */
+.modal-errors {
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: fixed;
+    background: rgba(0,0,0,.7);
+    z-index: 1000;
+}
+.modal-content {
+    position: absolute;
+    top: 25%;
+    left: 37%;
+    width: 25%;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    animation-delay: 3s;
+    animation: anima 0.3s linear;
+    font-family: sans-serif;
+}
+@media screen and (max-width: 1030px) {
+    .modal-content {
+        width: 40%;
+        left: 30%;
+    }
+}
+@media screen and (max-width: 780px) {
+    .modal-content {
+        width: 50%;
+        left: 26%;
+    }
+}
+@media screen and (max-width: 630px) {
+    .modal-content {
+        width: 60%;
+        left: 22%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .modal-content {
+        width: 70%;
+        left: 15%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .modal-content {
+        width: 80%;
+        left: 10%;
+    }
+}
+@media screen and (max-width: 345px) {
+    .modal-content {
+        width: 90%;
+        left: 5%;
+    }
+}
+@media screen and (max-width: 308px) {
+    .modal-content {
+        width: 98%;
+        left: 1%;
+    }
+}
+@keyframes anima {
+    from {
+         -webkit-transform: scale(1.2);
+         opacity: 0.5;
+    
+    } to {
+         -webkit-transform: scale(1);
+    }
+}
+.modal-title {
+    padding: 30px 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    opacity: 0.8;
+    color: red;
+}
+.error-description {
+    padding: 15px 30px;
+    margin: 0;
+    font-size: 20px;
+    color: #000;
+}
+.modal-errors .thanks {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #777;
+}
+.modal-yes {
+    color:#1973E9;
+    font-weight: 600;
+    padding: 15px 30px;
+    margin: 0;
+    cursor: pointer;
+}
+hr {
+    padding: 0;
+    margin:0;
+    opacity: 0.2;
+}
+/*modal for password checker */
+.modal-passchecker {
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: fixed;
+    background: rgba(0,0,0,.7);
+    z-index: 1000;
+}
+.modal-passchecker-content {
+    position: absolute;
+    top: 25%;
+    left: 37%;
+    width: 25%;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    animation-delay: 3s;
+    animation: anima 0.3s linear;
+    font-family: sans-serif;
+}
+@media screen and (max-width: 1030px) {
+    .modal-passchecker-content {
+        width: 40%;
+        left: 30%;
+    }
+}
+@media screen and (max-width: 780px) {
+    .modal-passchecker-content.modal-passchecker-content {
+        width: 50%;
+        left: 26%;
+    }
+}
+@media screen and (max-width: 630px) {
+    .modal-passchecker-content.modal-passchecker-content {
+        width: 60%;
+        left: 22%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .modal-passchecker-content.modal-passchecker-content {
+        width: 70%;
+        left: 15%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .modal-passchecker-content {
+        width: 80%;
+        left: 10%;
+    }
+}
+@media screen and (max-width: 345px) {
+    .modal-passchecker-content {
+        width: 90%;
+        left: 5%;
+    }
+}
+@media screen and (max-width: 308px) {
+    .modal-passchecker-content {
+        width: 98%;
+        left: 1%;
+    }
+}
+@keyframes anima {
+    from {
+         -webkit-transform: scale(1.2);
+         opacity: 0.5;
+    
+    } to {
+         -webkit-transform: scale(1);
+    }
+}
+.modal-passchecker-title {
+    padding: 30px 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    opacity: 0.8;
+    color: #000;
+}
+.passchecker-description {
+    padding: 10px 30px;
+    margin: 0;
+    font-size: 20px;
+    color: #777;
+}
+a.modal-next {
+    display: block;
+    color:#1973E9;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 15px 30px;
+    margin: 0;
+    width: 100%;
+}

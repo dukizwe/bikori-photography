@@ -1,0 +1,258 @@
+body {
+    background: #f2f2f2;
+}
+header {
+    background: rgb(81, 227, 246);
+    z-index: 1000;
+}
+header .logo a {
+    color: #000;
+}
+header nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.8);
+    transition: color 0.5s;
+    transition: background 0.2s;
+    border-radius: 2px;
+}
+header nav a:hover, header nav a:focus, header nav a.active {
+    color: rgb(255, 255, 255,0.8);
+    background: rgba(0, 0, 0, 0.342);
+    outline: none;
+}
+.login-title {
+    font-size: 40px;
+    color: #777;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.login-container {
+    padding: 50px 0;
+    width: 100%;
+    font-family: sans-serif;
+}
+.login-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px 10px;
+    font-size: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    border-radius: 5px;
+}
+.login-content div {
+    position: relative;
+}
+.login-content input {
+    background: none;
+    padding: 8px 5px;
+    width: 400px;
+    margin-top: 25px;
+    outline: none;
+    color: #000;
+    font-size: 20px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.788);
+}
+.login-content input:focus {
+    outline: none;
+    border: 1px solid rgba(66, 115, 180, 0.7);
+    box-shadow:0 0 5px 0.5px rgb(0,0,0,.1);
+}
+.login-content input:focus ~ label,
+.login-content input:valid ~ label
+{
+    top: 0;
+    font-size: 19px;
+    left: 6px;
+    color: rgba(0, 0, 0, 0.788);
+}
+.login-content label {
+    position: absolute;
+    top: 34px;
+    left: 6px;
+    color: #757575;
+    transition: top 0.2s;
+}
+.login-content label:hover {
+    cursor: auto;
+}
+.login-content .submit {
+    
+}
+.login-content .send-login {
+    background: rgba(66, 115, 180, 0.7);
+    border: none;
+    width: 150px;
+    text-align: center;
+    transition: background 0.2s;
+    color: rgba(0, 0, 0, 0.788);
+    margin-left: 250px;
+}
+.login-content .send-login:hover {
+    cursor: pointer;
+    background: rgba(66, 115, 180, 0.9);
+}
+.or-container {
+    text-align: right;
+    margin: 5px 0;
+    margin-right: 65px;
+}
+.sign-up-section {
+    display: flex;
+}
+.sign-up-section .sign-up-desc {
+    font-size: 17px;
+    margin-top: 10px;
+}
+.sign-up-section a.sign-up-now {
+    background: rgb(81, 227, 246, 0.7);
+    padding: 8px 5px;
+    border-radius: 2px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 34px;
+    color: rgba(0, 0, 0, 0.788)
+}
+.sign-up-section a.sign-up-now:hover {
+    background: rgb(81, 227, 246, 0.9);
+}
+@media screen and (max-width: 430px) {
+    .login-content {
+        width: 90%;
+    }
+    .login-content input {
+        width: 100%;
+    }
+    .login-content .submit {
+        display: flex;
+        justify-content: center;
+    }
+    .login-content .send-login {
+        margin-left: 0;
+    }
+    .login-content .or-container {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        margin-right: 0;
+    }
+    .login-content .sign-up-section {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .login-content a.sign-up-now {
+        margin-left: 0;
+    }
+}
+/* modal of errors */
+.modal-errors {
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: fixed;
+    background: rgba(0,0,0,.7);
+    z-index: 1000;
+}
+.modal-content {
+    position: absolute;
+    top: 25%;
+    left: 37%;
+    width: 25%;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    animation-delay: 3s;
+    animation: anima 0.3s linear;
+    font-family: sans-serif;
+}
+@media screen and (max-width: 1030px) {
+    .modal-content {
+        width: 40%;
+        left: 30%;
+    }
+}
+@media screen and (max-width: 780px) {
+    .modal-content {
+        width: 50%;
+        left: 26%;
+    }
+}
+@media screen and (max-width: 630px) {
+    .modal-content {
+        width: 60%;
+        left: 22%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .modal-content {
+        width: 70%;
+        left: 15%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .modal-content {
+        width: 80%;
+        left: 10%;
+    }
+}
+@media screen and (max-width: 345px) {
+    .modal-content {
+        width: 90%;
+        left: 5%;
+    }
+}
+@media screen and (max-width: 308px) {
+    .modal-content {
+        width: 98%;
+        left: 1%;
+    }
+}
+@keyframes anima {
+    from {
+         -webkit-transform: scale(1.2);
+         opacity: 0.5;
+    
+    } to {
+         -webkit-transform: scale(1);
+    }
+}
+.modal-title {
+    padding: 30px 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    opacity: 0.8;
+    color: red;
+}
+.error-description {
+    padding: 15px 30px;
+    margin: 0;
+    font-size: 20px;
+    color: #000;
+}
+.modal-errors .thanks {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #777;
+}
+.modal-yes {
+    color:#1973E9;
+    font-weight: 600;
+    padding: 15px 30px;
+    margin: 0;
+    cursor: pointer;
+}
+hr {
+    padding: 0;
+    margin:0;
+    opacity: 0.2;
+}

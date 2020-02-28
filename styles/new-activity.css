@@ -1,0 +1,53 @@
+body {
+    
+}
+header {
+    background: rgb(81, 227, 246);
+}
+header nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.8);
+    transition: color 0.5s;
+    transition: background 0.2s;
+    border-radius: 2px;
+}
+header nav a:hover, header nav a:focus, header nav a.active {
+    color: rgb(255, 255, 255,0.8);
+    background: rgba(0, 0, 0, 0.342);
+    outline: none;
+}
+.new-photo-container {
+    width: 100%;
+    padding: 40px 20px;
+    margin: auto;
+}
+.new-photo-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.new-photo input {
+    display: none;
+}
+.image-target-name {
+    margin: 10px;
+}
+.image-target-name input {
+    padding: 10px 2px;
+    font-size: 18px;
+}
+.sending input {
+    background: rgb(81, 227, 246, 0.7);
+    padding: 8px 5px;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.788);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
